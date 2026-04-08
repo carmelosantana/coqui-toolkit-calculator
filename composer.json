@@ -1,0 +1,59 @@
+{
+    "name": "coquibot/coqui-toolkit-calculator",
+    "description": "Math calculator toolkit for Coqui — evaluate arithmetic, scientific, and algebraic expressions with batch support",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carmelo Santana"
+        }
+    ],
+    "keywords": [
+        "php-agents",
+        "coqui",
+        "calculator",
+        "math",
+        "toolkit",
+        "expression-evaluator"
+    ],
+    "require": {
+        "php": "^8.4",
+        "nxp/math-executor": "^2.3"
+    },
+    "require-dev": {
+        "carmelosantana/php-agents": "^0.7",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\Calculator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\Calculator\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse"
+    },
+    "extra": {
+        "php-agents": {
+            "toolkits": [
+                "CoquiBot\\Toolkits\\Calculator\\CalculatorToolkit"
+            ],
+            "description": "Math expression evaluator with 60+ built-in functions and batch support"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
