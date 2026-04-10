@@ -175,7 +175,7 @@ final class CalculatorToolkit implements ToolkitInterface
                 return ToolResult::error($r['error']);
             }
 
-            return ToolResult::success((string) ($r['result'] ?? ''));
+            return ToolResult::success((string) $r['result']);
         }
 
         return ToolResult::success(
